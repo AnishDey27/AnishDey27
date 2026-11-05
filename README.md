@@ -30,29 +30,3 @@ Undergraduate in Electronics & Telecommunication Engineering at **Jadavpur Unive
 #### **Texas Instruments** — *Digital Design Intern (SITARA MPU DFT Team)* `[May 2026 – Jul 2026]`
 * **ATPG Collateral Automation:** Automated generation of 90+ ATPG collateral files (`assign`, `modeinit`, `editmodel`) from device specs using Agentic AI, cutting engineering turnaround time from **3–4 weeks to ~1 hour**.
 * **Large-Scale TSV Analysis:** Built an automated analysis pipeline parsing **10,000+ Test Structure Violations (TSVs)** across sub-chip and top-level designs, slashing manual review overhead by **~85%** via automated waiver justification.
-
----
-
-### 🚀 Key Microarchitecture & Verification Projects
-
-#### 1. [Silicon Studio IDE](https://github.com/AnishDey27/silicon-studio-ide) `Python | Yosys | Verilator | Sky130`
-* Full-stack EDA workspace integrating **Yosys**, **Verilator**, and **iverilog** with SkyWater 130nm and ASAP7 PDK libraries.
-* Automated rule checking for Clock Domain Crossing (CDC) synchronization, FSM deadlocks, and synthesis timing constraints.
-
-#### 2. [AXI4 High-Performance Memory Slave](https://github.com/AnishDey27) `SystemVerilog`
-* Architected a synthesizable AXI4 slave IP supporting **Out-of-Order execution** and non-blocking INCR bursts.
-* Decoupled AW and W channels synchronized via **Token FIFOs**; integrated **pipelined skid buffers** on primary interfaces.
-* Engineered per-ID pending FIFOs with a **Cross-Group Hazard Scoreboard** to prevent structural hazards and guarantee in-order completion across interleaved memory groups with asymmetric (2/4-cycle) access latencies.
-
-#### 3. [AXI4-Lite Slave & Verification Framework](https://github.com/AnishDey27/axi4-lite-slave-verification) `SystemVerilog | Python | Vivado`
-* Microarchitected a **"Snoop & Serialize" Hazard-Stalled FSM** enforcing strict Read-After-Write (RAW) consistency across simultaneous read/write collisions.
-* Built a multi-threaded verification testbench with parallel backpressure engines and a semaphore-locked scoreboard.
-* Validated protocol compliance with embedded **SystemVerilog Assertions (SVA)**, achieving **100% DUT reliability over 2,000,512 randomized cycles**.
-
-#### 4. [MESI Cache Protocol & Systems Simulator](https://github.com/AnishDey27/mesi-cache-simulator) `Python`
-* Developed a cycle-accurate, trace-driven 4-core SMP cache simulator with a shared snooping bus and **Tree-PLRU** eviction policy.
-* Modeled latency penalties across 8 stress scenarios, contrasting **18-cycle peer-to-peer transfers** against **103-cycle memory fetches**, BusRdX invalidations, and dirty writebacks.
-
-#### 5. [RTL UART Transceiver (Tx & Rx)](https://github.com/AnishDey27/uart_tx_rtl) `Verilog | Vivado`
-* Parameterized UART transceiver core with deterministic FSM datapaths and standard VALID/READY handshakes.
-* Implemented a **2-stage CDC synchronizer**, **16x oversampling** clock recovery, and hardware framing-error detection.
